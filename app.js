@@ -13,9 +13,9 @@ app.use("/api/user", router);
 app.use("/api/blog", blogRoute);
 
  mongoose.connect(
-   process.env.DATA_BASE
+   "mongodb+srv://admin:admin1234@cluster0.2fl4roy.mongodb.net/?retryWrites=true&w=majority"
   )
-  .then(() => app.listen(process.env.PORT))
+  .then(() => app.listen(5000))
   .then(() =>
     console.log("Connected TO Database and Listening TO Localhost 5000")
   )
