@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+
+const mongoose =  require('mongoose')
 
 const Schema = mongoose.Schema;
 
@@ -23,5 +24,7 @@ const userSchema = new Schema({
     required: true }],
     
 });
-export default mongoose.model("User", userSchema);
+// export default mongoose.model("User", userSchema);
 // users
+const user = mongoose.model('User',userSchema)
+module.exports = user
